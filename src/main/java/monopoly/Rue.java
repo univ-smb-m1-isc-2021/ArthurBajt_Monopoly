@@ -22,6 +22,7 @@ public class Rue extends Case {
     	this.coefAchat = coefAchat;
     }
 
+    @Override
     public void acheter() {
     	etat.acheter(joueurEnTransac);
     }
@@ -66,10 +67,8 @@ public class Rue extends Case {
 
 	public int getCoefBiens() {
 		int nbBiens = biens.size();
-		if(nbBiens == 1) {
-			if(biens.get(0).isHotel()) {
-				return 5;
-			}
+		if(nbBiens == 1 && biens.get(0).isHotel()) {
+			return 5;
 		}
 		return nbBiens;
 	}

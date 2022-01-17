@@ -15,9 +15,8 @@ public class Quartier {
     }
 
     public boolean estPossedeeEntierement(final Joueur joueur) {
-    	Joueur potentielProprio = rues.get(0).getProprio();
-    	for(int i = 1; i < rues.size(); i++){
-    		if(rues.get(i).getProprio() != potentielProprio) {
+    	for(int i = 0; i < rues.size(); i++){
+    		if(rues.get(i).getProprio() != joueur) {
     			return false;
     		}
     	}
