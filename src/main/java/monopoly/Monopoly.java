@@ -1,14 +1,14 @@
 package monopoly;
 
 public class Monopoly {
-    public static Plateau plato = null;
+    public Plateau plato = null;
     
     public Monopoly() {
     	creerPartie();
     }
 
     public void creerPartie() {
-    	if(plato != null) {
+    	if(plato == null) {
         	plato = new Plateau();
     	}
     }
