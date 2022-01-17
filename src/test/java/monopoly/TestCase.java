@@ -1,12 +1,7 @@
 package monopoly;
 
-import monopoly.Bien;
-import monopoly.Joueur;
-import monopoly.Case;
 import org.junit.jupiter.api.Test;
-
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 
 class TestCase {
