@@ -22,6 +22,5 @@ public class Service extends Case {
 
     @Override
     public void arrive(final Joueur joueur) {
-    	//Logger -> n'est pas un service des eaux ou une gare
     }
 }
