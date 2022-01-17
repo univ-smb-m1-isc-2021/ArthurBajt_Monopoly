@@ -3,24 +3,27 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Plateau {
-    private List<Joueur> joueurs = new ArrayList<Joueur> ();
+    private List<Joueur> joueurs = new ArrayList<> ();
     private int indJoueur = 0;
 
     private Case depart;
 
-    public List<Quartier> quartiers = new ArrayList<Quartier> ();
+    private List<Quartier> quartiers = new ArrayList<> ();
     
     public Plateau() {
     	creerPlateau();
     }
 
     private void creerPlateau() {
-    	ArrayList<Case> cases = new ArrayList<Case>();
+    	ArrayList<Case> cases = new ArrayList<>();
     	
 		// Depart + 4 gares + 2 sde + 3 quartiers de 3 rues
 		Quartier france = new Quartier("France", EnumCouleur.BLEU);
+		quartiers.add(france);
 		Quartier italie = new Quartier("Italie", EnumCouleur.VERT);
+		quartiers.add(italie);
 		Quartier japon = new Quartier("Japon", EnumCouleur.ROUGE);
+		quartiers.add(japon);
 		
 		depart = new Case("Départ");
 		cases.add(depart);
@@ -116,10 +119,7 @@ public class Plateau {
 				nbJoueursRestants++;
 			}
 		}
-		if(nbJoueursRestants>1) {
-			return false;
-		}
-		return true;
+		return nbJoueursRestants<=1;
 	}
 
 }

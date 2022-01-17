@@ -14,7 +14,7 @@ public class Joueur {
 
     private Case estSur;
 
-    private List<Case> casesPossedees = new ArrayList<Case> ();
+    private List<Case> casesPossedees = new ArrayList<> ();
     
     public Joueur(String name, Case depart) {
     	nom = name;
@@ -27,7 +27,7 @@ public class Joueur {
     	sePlaceSur(estSur.avance(valeurDes));
     	estSur.arrive(this);
     	actionsPossibles();
-    	String input = "n";
+    	String input;
     	@SuppressWarnings("resource")
     	Scanner scan = new Scanner(System.in);
     	do {
@@ -123,8 +123,8 @@ public class Joueur {
 
     public void actionsPossibles() {
     	for(int i = 0; i<casesPossedees.size(); i++) {
-    		if(casesPossedees.get(i) instanceof Rue) {
-    			((Rue)casesPossedees.get(i)).construire();
+    		if(casesPossedees.get(i) instanceof Rue rue) {
+    			rue.construire();
     		}
     	}
     }

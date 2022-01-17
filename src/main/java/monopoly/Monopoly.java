@@ -1,14 +1,16 @@
 package monopoly;
 
 public class Monopoly {
-    public Plateau plato;
+    private Plateau plato = null;
     
     public Monopoly() {
     	creerPartie();
     }
 
     public void creerPartie() {
-    	plato = new Plateau();
+    	if(plato == null) {
+        	plato = new Plateau();
+    	}
     }
 
     public void ajouteJoueur(String name) {
