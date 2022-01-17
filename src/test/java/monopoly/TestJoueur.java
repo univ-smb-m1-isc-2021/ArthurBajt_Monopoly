@@ -1,3 +1,5 @@
+package monopoly;
+
 import monopoly.Joueur;
 import monopoly.Case;
 import org.junit.Test;

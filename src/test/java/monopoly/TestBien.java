@@ -1,3 +1,5 @@
+package monopoly;
+
 import monopoly.Bien;
 import monopoly.Joueur;
 import monopoly.Case;
