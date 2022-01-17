@@ -2,25 +2,14 @@ package monopoly;
 
 public class Gare extends Service {
 
-    private int prix;
-
     public Gare(String nom, int prix) {
-    	super(nom);
-    	this.prix = prix;
-    }
-
-    @Override
-    public void acheter() {
-    	if(joueurEnTransac.paiement(prix)) {
-        	etat = "Possédée";
-        	proprio = joueurEnTransac;
-    	}
+    	super(nom,prix,"Gare");
     }
 
     @Override
     public void arrive(final Joueur joueur) {
-    	joueurEnTransac = joueur;
     	System.out.println(joueur.getNom() + " arrive sur la gare \"" + this.nom + "\"");
+    	joueurEnTransac = joueur;
     	if(etat.equals("Achetable")) {
     		joueur.propositionAchatCase(prix);
     	}

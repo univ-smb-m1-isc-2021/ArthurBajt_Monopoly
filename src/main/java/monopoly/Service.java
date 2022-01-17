@@ -2,13 +2,21 @@ package monopoly;
 
 public class Service extends Case {
     protected String etat; //Achetable ou Possedee
+    protected int prix;
+    protected String type;
     
-    public Service(String name) {
+    public Service(String name, int prix, String type) {
     	super(name);
     	etat = "Achetable";
+    	this.prix = prix;
+    	this.type = type;
     }
 
     public void acheter() {
+    	if(joueurEnTransac.paiement(prix)) {
+        	etat = "Possédée";
+        	proprio = joueurEnTransac;
+    	}
     }
 
     @Override
