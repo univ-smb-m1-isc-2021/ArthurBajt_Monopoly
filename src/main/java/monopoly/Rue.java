@@ -7,7 +7,7 @@ public class Rue extends Case {
 
     private double coefAchat;
 
-    private List<Bien> biens = new ArrayList<Bien> ();
+    private List<Bien> biens = new ArrayList<> ();
 
     private EtatRue etat;
 

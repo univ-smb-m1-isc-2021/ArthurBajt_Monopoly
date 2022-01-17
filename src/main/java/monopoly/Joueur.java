@@ -123,8 +123,8 @@ public class Joueur {
 
     public void actionsPossibles() {
     	for(int i = 0; i<casesPossedees.size(); i++) {
-    		if(casesPossedees.get(i) instanceof Rue) {
-    			((Rue)casesPossedees.get(i)).construire();
+    		if(casesPossedees.get(i) instanceof Rue rue) {
+    			rue.construire();
     		}
     	}
     }
