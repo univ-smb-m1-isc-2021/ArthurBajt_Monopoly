@@ -20,7 +20,7 @@ public class Gare extends Service {
     public void arrive(final Joueur joueur) {
     	joueurEnTransac = joueur;
     	System.out.println(joueur.getNom() + " arrive sur la gare \"" + this.nom + "\"");
-    	if(etat == "Achetable") {
+    	if(etat.equals("Achetable")) {
     		joueur.propositionAchatCase(prix);
     	}
     	else

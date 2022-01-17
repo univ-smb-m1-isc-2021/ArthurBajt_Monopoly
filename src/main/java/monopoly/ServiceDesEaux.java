@@ -19,7 +19,7 @@ public class ServiceDesEaux extends Service {
     public void arrive(final Joueur joueur) {
     	joueurEnTransac = joueur;
     	System.out.println(joueur.getNom() + " arrive sur le service des eaux \"" + this.nom + "\"");
-    	if(etat == "Achetable") {
+    	if(etat.equals("Achetable")) {
     		joueur.propositionAchatCase(prix);
     	}
     	else
