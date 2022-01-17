@@ -32,7 +32,7 @@ public class Case {
     public void acheter() {
     }
 
-    protected void nouveauProprio(final Joueur joueur) {
+    public void nouveauProprio(final Joueur joueur) {
     	proprio = joueur;
     }
 

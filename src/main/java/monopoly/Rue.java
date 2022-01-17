@@ -53,7 +53,7 @@ public class Rue extends Case {
     }
     
     @Override
-    protected void nouveauProprio(final Joueur joueur) {
+    public void nouveauProprio(final Joueur joueur) {
     	proprio = joueur;
     	if(quartier.estPossedeeEntierement(joueur)) {
     		quartier.devientConstructible();
