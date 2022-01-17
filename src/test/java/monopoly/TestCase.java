@@ -5,8 +5,8 @@ import monopoly.Joueur;
 import monopoly.Case;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 
 class TestCase {
@@ -14,7 +14,7 @@ class TestCase {
     @Test
     void testCreateCase(){
         Case c = new Case("La case");
-        assertNotNull(c);
+        Assertions.assertNotNull(c);
     }
 
 
@@ -22,7 +22,7 @@ class TestCase {
     void testNomCase(){
         String nom = "La case";
         Case c = new Case(nom);
-        assertEquals(nom, c.getName());
+        Assertions.assertEquals(nom, c.getName());
     }
 
 
@@ -33,8 +33,8 @@ class TestCase {
         c1.setSuivant(c2);
         c2.setSuivant(c1);
 
-        assertEquals(c1, c2.avance(1));
-        assertEquals(c2, c1.avance(1));
+        Assertions.assertEquals(c1, c2.avance(1));
+        Assertions.assertEquals(c2, c1.avance(1));
     }
 
 
@@ -45,7 +45,7 @@ class TestCase {
 
         c.nouveauProprio(j);
 
-        assertEquals(j, c.getProprio());
+        Assertions.assertEquals(j, c.getProprio());
     }
 
 }
