@@ -14,13 +14,13 @@ class TestBien {
     @Test
     void createBien(){
         Bien b = new Bien(50);
-        assertEquals(b.getPrix(), 50);
+        assertEquals(50, b.getPrix());
     }
 
 
     @Test
     void isBienHotel(){
         Bien b = new Bien(50);
-        assertEquals(b.isHotel(), false);
+        assertEquals(false, b.isHotel());
     }
 }
