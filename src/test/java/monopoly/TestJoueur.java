@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Assertions;
 
 
 public class TestJoueur {
-
+//    eojhif
     @Test
     void TestCreateJoueurName(){
     	Case c = new Case("Départ");
