@@ -17,6 +17,7 @@ public class TestBien {
     }
 
 
+    @Test
     public void isBienHotel(){
         Bien b = new Bien(50);
         assertEquals(b.isHotel(), false);
