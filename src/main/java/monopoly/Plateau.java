@@ -19,8 +19,11 @@ public class Plateau {
     	
 		// Depart + 4 gares + 2 sde + 3 quartiers de 3 rues
 		Quartier france = new Quartier("France", EnumCouleur.BLEU);
+		quartiers.add(france);
 		Quartier italie = new Quartier("Italie", EnumCouleur.VERT);
+		quartiers.add(italie);
 		Quartier japon = new Quartier("Japon", EnumCouleur.ROUGE);
+		quartiers.add(japon);
 		
 		depart = new Case("Départ");
 		cases.add(depart);
@@ -116,7 +119,7 @@ public class Plateau {
 				nbJoueursRestants++;
 			}
 		}
-		return !(nbJoueursRestants>1);
+		return nbJoueursRestants<=1;
 	}
 
 }

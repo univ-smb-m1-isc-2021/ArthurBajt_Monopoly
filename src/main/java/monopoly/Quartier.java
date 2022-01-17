@@ -7,7 +7,7 @@ public class Quartier {
 
     private EnumCouleur couleur;
 
-    private List<Rue> rues = new ArrayList<Rue> ();
+    private List<Rue> rues = new ArrayList<> ();
     
     public Quartier(String nom, EnumCouleur coul) {
     	this.nom = nom;
