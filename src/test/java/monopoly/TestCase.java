@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 
-class TestCase {
+public class TestCase {
 
     @Test
     void testCreateCase(){
