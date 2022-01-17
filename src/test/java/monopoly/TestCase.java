@@ -3,7 +3,7 @@ package monopoly;
 import monopoly.Bien;
 import monopoly.Joueur;
 import monopoly.Case;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
