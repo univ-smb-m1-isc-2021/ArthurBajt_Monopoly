@@ -7,6 +7,7 @@
     <groupId>org.example</groupId>
     <artifactId>ArthurBajt_Monopoly</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <name>ArthurBajt_Monopoly</name>
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
