@@ -14,11 +14,10 @@ public class EtatRuePossedee extends EtatRue {
     @Override
     public void payerLoyer(Joueur joueurEnTransac) {
     	int prixLoyer = (int)(rue.getPrixLieu()*rue.getCoefPrix());
-    	if(joueurEnTransac.paiementForce(prixLoyer)) {
-    		rue.getProprio().recevoir(prixLoyer);
-		} else {
-			rue.getProprio().recevoir(joueurEnTransac.getSolde()+prixLoyer); //Si il a pas pu payer en entier il a donc perdu
-    	}
+    	if(!joueurEnTransac.paiementForce(prixLoyer)) {
+    		prixLoyer += joueurEnTransac.getSolde();
+		}
+		rue.getProprio().recevoir(prixLoyer);
     }
 
     @Override

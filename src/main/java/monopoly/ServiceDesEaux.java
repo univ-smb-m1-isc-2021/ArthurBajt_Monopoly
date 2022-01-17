@@ -8,6 +8,7 @@ public class ServiceDesEaux extends Service {
     	this.prix = prix;
     }
 
+    @Override
     public void acheter() {
     	if(joueurEnTransac.paiement(prix)) {
         	etat = "Possédée";
