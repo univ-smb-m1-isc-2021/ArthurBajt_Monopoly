@@ -12,6 +12,7 @@ public class Service extends Case {
     	this.type = type;
     }
 
+    @Override
     public void acheter() {
     	if(joueurEnTransac.paiement(prix)) {
         	etat = "Possédée";
@@ -21,5 +22,6 @@ public class Service extends Case {
 
     @Override
     public void arrive(final Joueur joueur) {
+    	//Logger -> n'est pas un service des eaux ou une gare
     }
 }
