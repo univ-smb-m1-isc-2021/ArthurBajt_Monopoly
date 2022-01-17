@@ -1,7 +1,7 @@
 package monopoly;
 
 public class Monopoly {
-    public Plateau plato = null;
+    private Plateau plato = null;
     
     public Monopoly() {
     	creerPartie();
