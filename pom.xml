@@ -30,7 +30,6 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     
-    <!-- ouhouhouh --> 
 	<build>
 		<pluginManagement>
 			<plugins>
