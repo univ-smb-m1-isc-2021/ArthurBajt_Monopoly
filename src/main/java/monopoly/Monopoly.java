@@ -1,35 +1,35 @@
 package monopoly;
 
 public class Monopoly {
-    private Plateau plato = null;
-    
-    public Monopoly() {
-    	creerPartie();
-    }
+	private Plateau plato = null;
 
-    public void creerPartie() {
-    	if(plato == null) {
-        	plato = new Plateau();
-    	}
-    }
+	public Monopoly() {
+		creerPartie();
+	}
 
-    public void ajouteJoueur(String name) {
-    	plato.creerJoueur(name);
-    }
+	public void creerPartie() {
+		if (plato == null) {
+			plato = new Plateau();
+		}
+	}
 
-    public void jouePartie() {
+	public void ajouteJoueur(String name) {
+		plato.creerJoueur(name);
+	}
 
-    	while(!plato.isFini()) {
-    		plato.nouveauTour();
-    	}
-    }
+	public void jouePartie() {
 
-    public static void main(String[] args) {
-    	Monopoly monop = new Monopoly();
-    	monop.ajouteJoueur("Léo");
-    	monop.ajouteJoueur("Arthur");
-    	monop.ajouteJoueur("Djamel");
-    	monop.ajouteJoueur("Loris");
-    	monop.jouePartie();
-    }
+		while (!plato.isFini()) {
+			plato.nouveauTour();
+		}
+	}
+
+	public static void main(String[] args) {
+		Monopoly monop = new Monopoly();
+		monop.ajouteJoueur("Léo");
+		monop.ajouteJoueur("Arthur");
+		monop.ajouteJoueur("Djamel");
+		monop.ajouteJoueur("Loris");
+		monop.jouePartie();
+	}
 }
